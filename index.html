@@ -13,10 +13,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('https://wallpaperaccess.com/full/3898677.jpg') no-repeat center center fixed;
+      background: url('https://wallpaperaccess.com/full/3898677.jpg') no-repeat center center fixed; /* Background image */
       background-size: cover;
       overflow: hidden;
-      flex-direction: column;
+      flex-direction: column; /* Allow stacking */
     }
 
     /* Position the text at the top of the screen */
@@ -30,22 +30,33 @@
       top: 0;
       left: 0;
       right: 0;
-      margin-top: 20px;
+      margin-top: 20px; /* Add a small gap from the top */
       padding: 10px;
       white-space: nowrap;
-      animation: slideIn 4s ease-in-out 2; /* Animation applied here */
+      display: inline-block;
+      animation: slideIn 2s ease-in-out, looptyLoop 2s ease-in-out 2s forwards; /* Apply animations */
     }
 
-    /* Animation for the text */
+    /* Animation for sliding in from the right */
     @keyframes slideIn {
       0% {
-        transform: translateX(100%); /* Start from right */
-      }
-      50% {
-        transform: translateX(-50%); /* Move to the left slightly */
+        transform: translateX(100vw);
       }
       100% {
-        transform: translateX(0); /* End at the correct position */
+        transform: translateX(0);
+      }
+    }
+
+    /* Animation for looping like a rollercoaster */
+    @keyframes looptyLoop {
+      0% {
+        transform: translateX(0) rotate(0deg);
+      }
+      50% {
+        transform: translateX(-50px) rotate(180deg);
+      }
+      100% {
+        transform: translateX(0) rotate(360deg);
       }
     }
 
@@ -85,10 +96,10 @@
   <title>Get Started Button</title>
 </head>
 <body>
-  <!-- Text at the very top with animation -->
+  <!-- Text at the very top -->
   <div class="header-text">Create Beyond Boundaries with Envisage</div>
 
-  <!-- Button remains centered -->
+  <!-- Button remains centered, updated URL -->
   <a href="https://bestusernameeverfr.github.io/information/" id="startButton">
     <div class="button"></div>
   </a>
