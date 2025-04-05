@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('https://wallpaperaccess.com/full/3898677.jpg') no-repeat center center fixed; /* Background image */
+      background: url('https://wallpaperaccess.com/full/3898677.jpg') no-repeat center center fixed; /* New background image */
       background-size: cover;
       overflow: hidden;
       flex-direction: column; /* Allow stacking */
@@ -32,31 +32,59 @@
       right: 0;
       margin-top: 20px; /* Add a small gap from the top */
       padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       white-space: nowrap;
-      display: inline-block;
-      animation: slideIn 2s ease-in-out, looptyLoop 2s ease-in-out 2s forwards; /* Apply animations */
+      opacity: 0;
+      animation: enterText 5s infinite; /* Animation to loop the effect */
     }
 
-    /* Animation for sliding in from the right */
-    @keyframes slideIn {
+    /* Keyframes for the text animation */
+    @keyframes enterText {
       0% {
-        transform: translateX(100vw);
+        opacity: 1;
+        transform: translateX(100vw); /* Start from the right */
       }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* Animation for looping like a rollercoaster */
-    @keyframes looptyLoop {
-      0% {
-        transform: translateX(0) rotate(0deg);
+      25% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg); /* Move to initial position */
       }
       50% {
-        transform: translateX(-50px) rotate(180deg);
+        opacity: 1;
+        transform: translateX(0) rotate(180deg); /* Halfway around */
+      }
+      75% {
+        opacity: 1;
+        transform: translateX(0) rotate(360deg); /* Complete loop */
       }
       100% {
-        transform: translateX(0) rotate(360deg);
+        opacity: 1;
+        transform: translateX(0) rotate(0deg); /* Back to final position */
+      }
+    }
+
+    /* Circle effect when the letters separate */
+    .header-text span {
+      display: inline-block;
+      animation: spinLetters 5s infinite; /* Apply spinning to each letter */
+    }
+
+    @keyframes spinLetters {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(90deg) translateX(150px); /* Move letters in a circle */
+      }
+      50% {
+        transform: rotate(180deg) translateY(150px); /* Letters loop to top */
+      }
+      75% {
+        transform: rotate(270deg) translateX(-150px); /* Move letters around */
+      }
+      100% {
+        transform: rotate(360deg) translateY(-150px); /* Return to center */
       }
     }
 
@@ -97,7 +125,13 @@
 </head>
 <body>
   <!-- Text at the very top -->
-  <div class="header-text">Create Beyond Boundaries with Envisage</div>
+  <div class="header-text">
+    <span>Create</span>
+    <span>Beyond</span>
+    <span>Boundaries</span>
+    <span>With</span>
+    <span>Envisage</span>
+  </div>
 
   <!-- Button remains centered, updated URL -->
   <a href="https://bestusernameeverfr.github.io/information/" id="startButton">
