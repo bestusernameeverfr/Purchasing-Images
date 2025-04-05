@@ -32,60 +32,6 @@
       right: 0;
       margin-top: 20px; /* Add a small gap from the top */
       padding: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap;
-      opacity: 0;
-      animation: enterText 5s infinite; /* Animation to loop the effect */
-    }
-
-    /* Keyframes for the text animation */
-    @keyframes enterText {
-      0% {
-        opacity: 1;
-        transform: translateX(100vw); /* Start from the right */
-      }
-      25% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg); /* Move to initial position */
-      }
-      50% {
-        opacity: 1;
-        transform: translateX(0) rotate(180deg); /* Halfway around */
-      }
-      75% {
-        opacity: 1;
-        transform: translateX(0) rotate(360deg); /* Complete loop */
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg); /* Back to final position */
-      }
-    }
-
-    /* Circle effect when the letters separate */
-    .header-text span {
-      display: inline-block;
-      animation: spinLetters 5s infinite; /* Apply spinning to each letter */
-    }
-
-    @keyframes spinLetters {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(90deg) translateX(150px); /* Move letters in a circle */
-      }
-      50% {
-        transform: rotate(180deg) translateY(150px); /* Letters loop to top */
-      }
-      75% {
-        transform: rotate(270deg) translateX(-150px); /* Move letters around */
-      }
-      100% {
-        transform: rotate(360deg) translateY(-150px); /* Return to center */
-      }
     }
 
     .button {
@@ -125,13 +71,7 @@
 </head>
 <body>
   <!-- Text at the very top -->
-  <div class="header-text">
-    <span>Create</span>
-    <span>Beyond</span>
-    <span>Boundaries</span>
-    <span>With</span>
-    <span>Envisage</span>
-  </div>
+  <div class="header-text">Create Beyond Boundaries with Envisage</div>
 
   <!-- Button remains centered, updated URL -->
   <a href="https://bestusernameeverfr.github.io/information/" id="startButton">
