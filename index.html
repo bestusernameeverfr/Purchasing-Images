@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <style>
+    /* Importing the Dancing Script font */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
     html, body {
       height: 100%;
       margin: 0;
@@ -13,21 +15,20 @@
       align-items: center;
       background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMGFuZCUyMHB1cnBsZSUyMGdyYWRpZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 50px;
       overflow: hidden;
+      flex-direction: column; /* Stack elements vertically */
     }
 
-    h1 {
+    /* Center the text at the top */
+    .header-text {
       font-family: 'Dancing Script', cursive;
       font-weight: bold;
-      font-size: 60px;
       color: black;
+      font-size: 60px;
       text-align: center;
-      margin: 0;
+      margin-top: 20px; /* Slight space from the top */
+      position: absolute;
+      width: 100%;
     }
 
     .button {
@@ -45,7 +46,6 @@
       overflow: hidden;
       min-width: 160px;
       min-height: 50px;
-      margin-top: 20px;
     }
 
     .button::before {
@@ -63,12 +63,14 @@
     .button:hover {
       opacity: 0.8;
     }
-
   </style>
   <title>Get Started Button</title>
 </head>
 <body>
-  <h1>Create Beyond Boundaries with Envisage</h1>
+  <!-- Text at the top -->
+  <div class="header-text">Create Beyond Boundaries with Envisage</div>
+
+  <!-- Button remains the same -->
   <a href="https://sites.google.com/view/envisageai/get-started" id="startButton">
     <div class="button"></div>
   </a>
