@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMGFuZCUyMHB1cnBsZSUyMGdyYWRpZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .button {
+      padding: 10px 30px; /* Reduced padding */
+      background-color: black;
+      color: transparent;
+      border: 2px solid #000;
+      border-radius: 30px;
+      font-size: 20px; /* Reduced font size */
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      min-width: 160px; /* Reduced min-width */
+      min-height: 50px; /* Reduced min-height */
+    }
+
+    .button::before {
+      content: 'Get Started';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(to right, purple, lightblue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .button:hover {
+      opacity: 0.8;
+    }
+
+  </style>
+  <title>Get Started Button</title>
+</head>
+<body>
+  <a href="https://sites.google.com/view/envisageai/get-started" id="startButton">
+    <div class="button"></div>
+  </a>
+
+  <script>
+    document.getElementById('startButton').addEventListener('click', function() {
+      setTimeout(function() {
+        window.close();
+      }, 3000); // Close the page after 3 seconds
+    });
+  </script>
+</body>
+</html>
