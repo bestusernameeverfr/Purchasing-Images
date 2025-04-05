@@ -16,19 +16,22 @@
       background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMGFuZCUyMHB1cnBsZSUyMGdyYWRpZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center fixed;
       background-size: cover;
       overflow: hidden;
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column; /* Allow stacking */
     }
 
-    /* Center the text at the top */
+    /* Position the text at the top of the screen */
     .header-text {
       font-family: 'Dancing Script', cursive;
       font-weight: bold;
       color: black;
       font-size: 60px;
       text-align: center;
-      margin-top: 20px; /* Slight space from the top */
       position: absolute;
-      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-top: 20px; /* Add a small gap from the top */
+      padding: 10px;
     }
 
     .button {
@@ -67,10 +70,10 @@
   <title>Get Started Button</title>
 </head>
 <body>
-  <!-- Text at the top -->
+  <!-- Text at the very top -->
   <div class="header-text">Create Beyond Boundaries with Envisage</div>
 
-  <!-- Button remains the same -->
+  <!-- Button remains centered -->
   <a href="https://sites.google.com/view/envisageai/get-started" id="startButton">
     <div class="button"></div>
   </a>
